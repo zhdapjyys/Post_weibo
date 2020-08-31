@@ -9,7 +9,8 @@ import base64
 import rsa
 import requests
 import binascii
-from urllib import quote_plus
+#from urllib import quote_plus
+from urllib.parse import urlparse
 
 
 headers = {
@@ -25,7 +26,9 @@ headers = {
 
 def get_encodename(name):
     """name must be string"""
-    username_quote = quote_plus(str(name))
+    #username_quote = quote_plus(str(name))
+
+    username_quote = urlparse(str(name))
     username_base64 = base64.b64encode(username_quote.encode("utf-8"))
     return username_base64.decode("utf-8")
 
