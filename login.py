@@ -14,6 +14,7 @@ from urllib import quote_plus
 
 headers = {
 	# "Host":"login.sina.com.cn",
+	# "TESTING",
 	"Connection":"keep-alive",
 	"User-Agent":"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36",
 	"Accept":"*/*",
